@@ -106,12 +106,12 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
   border-bottom:1px solid rgba(26,21,18,.08);
 }
 .nav{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:2rem;min-height:var(--header-h);
+  display:flex;align-items:center;
+  min-height:var(--header-h);
 }
-.nav-list{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+.nav-list{display:flex;gap:128px;list-style:none;margin:0;padding:0}
 .nav-left{display:flex;align-items:center}
-.nav-right{display:flex;align-items:center;gap:1.4rem}
+.nav-right{display:flex;align-items:center;margin-left:128px}
 .nav-link{
   text-decoration:none;font-size:.85rem;letter-spacing:.02em;
   color:rgba(26,21,18,.72);transition:color .2s;
@@ -121,7 +121,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
   color:var(--preto);text-decoration:underline;text-decoration-color:var(--mostarda);
   text-decoration-thickness:2px;text-underline-offset:6px;
 }
-.brand{display:inline-flex;align-items:center;gap:.5rem;color:var(--preto);text-decoration:none;position:relative}
+.brand{display:inline-flex;align-items:center;gap:.5rem;color:var(--preto);text-decoration:none;position:relative;margin:0 128px}
 .brand svg{width:30px;height:22px}
 .nav-toggle{display:none;flex-direction:column;gap:5px;padding:.5rem;background:none;border:none;cursor:pointer}
 .nav-toggle span{width:22px;height:2px;background:var(--preto);border-radius:2px;transition:transform .25s,opacity .25s}
@@ -288,7 +288,10 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 @media (min-width:861px){ .menu-mobile{display:none !important} }
 @media (max-width:860px){
   .nav{justify-content:space-between}
-  .nav-left,.nav-right{display:none}
+  .nav-left,.nav-right,.brand{margin:0}
+  .nav-list{gap:1.4rem}
+  .nav-left{display:none}
+  .nav-right{display:none}
   .nav-toggle{display:inline-flex;justify-self:end}
   .menu-mobile{display:grid;gap:.2rem;background:var(--offwhite);padding:1rem 4vw 1.6rem;border-top:1px solid rgba(26,21,18,.08)}
   .menu-mobile[hidden]{display:none}
