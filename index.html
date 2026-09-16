@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chico Martins — editor e motion designer</title>
+  <meta name="description" content="Portfólio de Chico Martins, editor e motion designer: vídeos para redes sociais, animação de branding, edição institucional e motion design.">
+  <meta name="theme-color" content="#F1E9DC">
+  <!-- metadados sociais (trocar og:url e og:image ao publicar) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chico Martins — editor e motion designer">
+  <meta property="og:description" content="Vídeos para redes sociais, animação de branding, edição institucional e motion design.">
+  <meta property="og:url" content="https://SEU-DOMINIO/">
+  <meta property="og:image" content="https://SEU-DOMINIO/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Cpath d='M3 3l9 7-9 7zM25 3l-9 7 9 7z' fill='none' stroke='%23C99A3A' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topo">
+  <nav class="nav container" aria-label="navegação principal">
+    <ul class="nav-list nav-left">
+      <li><a class="nav-link" href="#home" data-section="home">home</a></li>
+      <li><a class="nav-link" href="#works" data-section="works">works</a></li>
+    </ul>
+
+    <!-- marca pessoal: provisória (substituir pelo logo definitivo) -->
+    <a class="brand" href="#home" aria-label="Chico Martins — ir para o início" title="marca pessoal provisória">
+      <svg viewBox="0 0 28 20" aria-hidden="true"><path d="M3 3l9 7-9 7zM25 3l-9 7 9 7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#contato" data-section="contato">contato</a></li>
+        <li><a class="nav-link" href="#sobre" data-section="sobre">sobre</a></li>
+      </ul>
+      <a class="btn btn-contratar" href="#contato">contratar</a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu-mobile" aria-label="abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="menu-mobile" id="menu-mobile" hidden>
+    <a href="#home" data-section="home">home</a>
+    <a href="#works" data-section="works">works</a>
+    <a href="#contato" data-section="contato">contato</a>
+    <a href="#sobre" data-section="sobre">sobre</a>
+    <a class="btn btn-contratar" href="#contato">contratar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- abertura -->
+  <section class="hero" id="home" aria-labelledby="hero-titulo">
+    <div class="hero-shapes" aria-hidden="true">
+      <span class="shape circle"></span>
+      <span class="shape diamond"></span>
+    </div>
+    <div class="hero-inner container reveal">
+      <!-- PLACEHOLDER: foto principal recortada do Chico -->
+      <figure class="ph photo-hero">
+        <span class="tag-ph" aria-hidden="true">ph</span>
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg>
+        <figcaption class="mono">foto do chico · substituir</figcaption>
+      </figure>
+      <h1 class="hero-titulo" id="hero-titulo">Chico Martins</h1>
+      <p class="hero-sub">editor e motion designer</p>
+      <a class="scroll-hint" href="#numeros" aria-label="rolar para os números">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l6 6 6-6M6 12l6 6 6-6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- faixa de números (conteúdo provisório da referência) -->
+  <section class="numeros" id="numeros" aria-label="números do canal">
+    <ul class="numeros-lista container reveal">
+      <li><strong class="num num-mostarda">+103 MI</strong><span>de views geradas</span></li>
+      <li><strong class="num">+300</strong><span>projetos criativos</span></li>
+      <li><strong class="num">+557K</strong><span>inscritos acumulados</span></li>
+    </ul>
+  </section>
+
+  <!-- marcas e creators (preto) -->
+  <section class="parceiros" id="parceiros" aria-labelledby="parceiros-titulo">
+    <h2 class="sr-only" id="parceiros-titulo">Marcas e creators parceiros</h2>
+    <div class="container reveal">
+      <p class="sec-label">Marcas:</p>
+      <!-- logos provisórios em texto; entrarão os arquivos oficiais -->
+      <ul class="marcas">
+        <li class="brand-krona" title="logo provisório em texto"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 12h8"/></svg>KRONA</li>
+        <li class="brand-samsung" title="logo provisório em texto">SAMSUNG</li>
+        <li class="brand-cist" title="logo provisório em texto">CIST</li>
+        <li class="brand-ambev" title="logo provisório em texto">ambev</li>
+        <li class="brand-solid" title="logo provisório em texto"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/></svg>SOLID</li>
+      </ul>
+      <p class="nota">logos em texto são placeholders — arquivos oficiais entram depois.</p>
+
+      <p class="sec-label">Creators:</p>
+      <div class="crew">
+        <button class="crew-btn" data-dir="-1" aria-label="ver creators anteriores">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 6l-6 6 6 6M18 6l-6 6 6 6"/></svg>
+        </button>
+        <ul class="crew-row" id="crew-row">
+          <li class="crew-item">
+            <span class="ph avatar" title="avatar provisório"><span class="tag-ph" aria-hidden="true">ph</span><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></span>
+            <span class="chip-num">+1.24 mi</span>
+          </li>
+          <li class="crew-item">
+            <span class="ph avatar" title="avatar provisório"><span class="tag-ph" aria-hidden="true">ph</span><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></span>
+            <span class="chip-num">+7.5 mi</span>
+          </li>
+          <li class="crew-item">
+            <span class="ph avatar" title="avatar provisório"><span class="tag-ph" aria-hidden="true">ph</span><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></span>
+            <span class="chip-num">+2.6 mi</span>
+          </li>
+          <li class="crew-item">
+            <span class="ph avatar" title="avatar provisório"><span class="tag-ph" aria-hidden="true">ph</span><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></span>
+            <span class="chip-num">+2.75 mi</span>
+          </li>
+        </ul>
+        <button class="crew-btn" data-dir="1" aria-label="ver próximos creators">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6l6 6-6 6M6 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- works teaser (vermelho) — vitrine curta; a página completa é /works -->
+  <section class="works-teaser" id="works" aria-labelledby="works-titulo">
+    <div class="container reveal">
+      <header class="sec-head">
+        <h2 id="works-titulo">Works</h2>
+        <p>Meus melhores jobs.</p>
+      </header>
+      <ul class="works-grid">
+        <li><a class="work-card" href="works.html" aria-label="Hero Base — abrir página de trabalhos (em breve)">
+          <span class="ph thumb"><span class="tag-ph" aria-hidden="true">ph</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg><span class="mono">thumb · substituir</span></span>
+          <span class="work-name">Hero Base</span></a></li>
+        <li><a class="work-card" href="works.html" aria-label="Samsung — abrir página de trabalhos (em breve)">
+          <span class="ph thumb"><span class="tag-ph" aria-hidden="true">ph</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg><span class="mono">thumb · substituir</span></span>
+          <span class="work-name">Samsung</span></a></li>
+        <li><a class="work-card" href="works.html" aria-label="Flakes Power — abrir página de trabalhos (em breve)">
+          <span class="ph thumb"><span class="tag-ph" aria-hidden="true">ph</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg><span class="mono">thumb · substituir</span></span>
+          <span class="work-name">Flakes Power</span></a></li>
+        <li><a class="work-card" href="works.html" aria-label="Krona — abrir página de trabalhos (em breve)">
+          <span class="ph thumb"><span class="tag-ph" aria-hidden="true">ph</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg><span class="mono">thumb · substituir</span></span>
+          <span class="work-name">Krona</span></a></li>
+      </ul>
+      <p class="works-cta"><a class="btn btn-ghost" href="works.html">ver página de trabalhos · em breve</a></p>
+    </div>
+  </section>
+
+  <!-- serviços (preto) — renderizado da lista de dados em js/main.js -->
+  <section class="servicos" id="servicos" aria-labelledby="servicos-titulo">
+    <div class="container reveal">
+      <header class="sec-head">
+        <h2 id="servicos-titulo">Serviços</h2>
+        <p>Motion Design e Edição de Vídeo</p>
+      </header>
+      <ul class="servicos-grid" id="lista-servicos"></ul>
+      <noscript>
+        <ul class="servicos-grid">
+          <li class="svc"><h3>Vídeos para Redes Sociais</h3><p>Reels, vídeos de YouTube, gameplays, vlogs e conteúdo otimizado para engajamento.</p></li>
+          <li class="svc"><h3>Animação de Branding</h3><p>Identidade visual animada, logos em movimento e elementos de marca dinâmicos.</p></li>
+          <li class="svc"><h3>Edição Institucional</h3><p>Vídeos corporativos, apresentações e conteúdo profissional para empresas.</p></li>
+          <li class="svc"><h3>Motion Design</h3><p>Animações 2D, transições criativas e efeitos visuais para qualquer projeto.</p></li>
+        </ul>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- sobre (vermelho) -->
+  <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container sobre-grid reveal">
+      <!-- PLACEHOLDER: foto da seção sobre -->
+      <figure class="ph photo-sobre">
+        <span class="tag-ph" aria-hidden="true">ph</span>
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg>
+        <figcaption class="mono">foto do chico · substituir</figcaption>
+      </figure>
+      <div class="sobre-texto">
+        <h2 id="sobre-titulo">Sobre</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+        <h3>Softwares que uso</h3>
+        <ul class="chips">
+          <li class="chip">software 1 [ph]</li>
+          <li class="chip">software 2 [ph]</li>
+          <li class="chip">software 3 [ph]</li>
+          <li class="chip">software 4 [ph]</li>
+          <li class="chip">software 5 [ph]</li>
+        </ul>
+        <h3>Idiomas que falo</h3>
+        <ul class="chips">
+          <li class="chip">idioma 1 [ph]</li>
+          <li class="chip">idioma 2 [ph]</li>
+          <li class="chip">idioma 3 [ph]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- contato (mostarda) -->
+  <section class="contato" id="contato" aria-labelledby="contato-titulo">
+    <div class="container reveal">
+      <h2 id="contato-titulo">Contato</h2>
+      <p class="contato-lead">Tem um projeto em mente? Me chama por aqui ou por um dos canais abaixo.</p>
+      <ul class="canais">
+        <li><a href="mailto:francisco.maemd@gmail.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span>francisco.maemd@gmail.com</span></a></li>
+        <li><a href="https://wa.me/5547991520459" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>
+          <span>WhatsApp · +55 47 99152-0459</span></a></li>
+        <li><a href="https://linkedin.com/in/chicomartins" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-5M12 13a2.5 2.5 0 0 1 5 0v3"/></svg>
+          <span>LinkedIn · /in/chicomartins</span></a></li>
+      </ul>
+
+      <form class="form" id="form-contato" novalidate>
+        <div>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required>
+          <p class="field-err" id="erro-nome"></p>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <p class="field-err" id="erro-email"></p>
+        </div>
+        <div class="full">
+          <label for="assunto">Assunto</label>
+          <input id="assunto" name="assunto" type="text" required>
+          <p class="field-err" id="erro-assunto"></p>
+        </div>
+        <div class="full">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+          <p class="field-err" id="erro-mensagem"></p>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        <div class="full">
+          <button class="btn btn-preto" type="submit" id="btn-enviar">enviar mensagem</button>
+        </div>
+        <p class="form-nota">envio direto em configuração (domínio autenticado). por enquanto, o formulário abre seu app de e-mail com tudo preenchido.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-inner">
+    <a class="brand brand-rodape" href="#home" aria-label="Chico Martins — voltar ao início">
+      <svg viewBox="0 0 28 20" aria-hidden="true"><path d="M3 3l9 7-9 7zM25 3l-9 7 9 7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Chico Martins</span>
+    </a>
+    <ul class="rodape-links">
+      <li><a href="mailto:francisco.maemd@gmail.com">e-mail</a></li>
+      <li><a href="https://wa.me/5547991520459" target="_blank" rel="noopener">whatsapp</a></li>
+      <li><a href="https://linkedin.com/in/chicomartins" target="_blank" rel="noopener">linkedin</a></li>
+    </ul>
+    <p class="rodape-copy">© 2026 Francisco Martins Alexandre</p>
+  </div>
+</footer>
+
+<a class="zap-float" href="https://wa.me/5547991520459" target="_blank" rel="noopener" aria-label="abrir conversa no WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>
+</a>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
