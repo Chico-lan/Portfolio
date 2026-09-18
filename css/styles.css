@@ -328,9 +328,17 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
   .nav-toggle{display:inline-flex;justify-self:end}
   .menu-mobile{display:grid;gap:.2rem;background:var(--offwhite);padding:1rem 4vw 1.6rem;border-top:1px solid rgba(26,21,18,.08)}
   .menu-mobile[hidden]{display:none}
-  .menu-mobile a{display:block;padding:.7rem .2rem;font-weight:600;text-decoration:none;border-bottom:1px dashed rgba(26,21,18,.15)}
+  .menu-mobile a{
+     display:block;padding:.7rem .2rem;
+     font-size:var(--nav-font);                 /* ← novo: acompanha o token do header */
+     font-weight:600;text-decoration:none;
+     border-bottom:1px dashed rgba(26,21,18,.15);
+   }
   .menu-mobile .btn{margin-top:1rem;justify-self:start;border-bottom:none}
-  .menu-mobile .btn-contratar{position:static;transform:none}
+  .menu-mobile .btn-contratar{
+     position:static;transform:none;
+     font-size:.85rem;                          /* devolve o tamanho de botão */
+   }
   .sobre-grid{grid-template-columns:1fr}
   .photo-sobre{max-width:420px}
 }
