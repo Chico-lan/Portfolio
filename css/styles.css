@@ -130,9 +130,12 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 /* botão: minúsculo, verde, fixado na direita do container */
 .nav .btn-contratar{
   position:absolute;right:0;top:50%;transform:translateY(-50%);
-  border-radius:8px;padding:.5rem 1.1rem;
+  border-radius:7px;
+  padding:.38rem .9rem;          /* era .5rem 1.1rem → caixa mais apertada */
   background:var(--verde);color:var(--offwhite);
-  font-family:var(--font-body);font-size:.85rem;
+  font-family:var(--font-body);
+  font-size:.88rem;              /* mesmo corpo do .nav-link → alinha visualmente */
+  line-height:1.25;
   text-transform:none;letter-spacing:0;
 }
 .nav .btn-contratar:hover{background:var(--verde-claro);transform:translateY(-50%)}
