@@ -48,6 +48,7 @@
   --font-mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --header-h:84px;                          /* header um pouco mais alto, como na referência */
   --nav-gap:clamp(1.8rem,4vw,3.4rem);       /* respiro uniforme entre itens e logo */
+  --nav-font:1.05rem;
 }
 }
 
@@ -119,7 +120,9 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .nav-right{display:contents}                      /* dissolve a caixa: ul vira item da col. 3 */
 .nav-right .nav-list{justify-self:start}          /* encosta no logo pelo outro lado */
 .nav-link{
-  text-decoration:none;font-size:.88rem;letter-spacing:.01em;
+  text-decoration:none;
+  font-size:var(--nav-font);          /* antes: .88rem */
+  letter-spacing:.01em;
   color:rgba(26,21,18,.82);
   transition:color .2s;
 }
@@ -131,10 +134,10 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .nav .btn-contratar{
   position:absolute;right:0;top:50%;transform:translateY(-50%);
   border-radius:7px;
-  padding:.38rem .9rem;          /* era .5rem 1.1rem → caixa mais apertada */
+  padding:.38rem .9rem;
   background:var(--verde);color:var(--offwhite);
   font-family:var(--font-body);
-  font-size:.88rem;              /* mesmo corpo do .nav-link → alinha visualmente */
+  font-size:var(--nav-font);          /* antes: .88rem — acompanha os links */
   line-height:1.25;
   text-transform:none;letter-spacing:0;
 }
