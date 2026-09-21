@@ -111,6 +111,8 @@
   if (form) {
     const status = document.getElementById("form-status");
     const botao = document.getElementById("btn-enviar");
+    /* guarda o markup original do botão (texto + SVG da seta) para restaurar depois */
+    const rotuloOriginal = botao ? botao.innerHTML : "";
     const REGRA_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     const CAMPOS = [
       { id: "nome",      msg: "informe seu nome." },
@@ -157,10 +159,13 @@
         mensagem: document.getElementById("mensagem").value.trim()
       };
       botao.disabled = true;
-      botao.textContent = "enviando…";
+      botao.innerHTML = "enviando…";
       setStatus("info", "enviando…");
 
-      function liberar() { botao.disabled = false; botao.textContent = "enviar mensagem"; }
+      function liberar() {
+        botao.disabled = false;
+        botao.innerHTML = rotuloOriginal;
+      }
 
       if (CONFIG_ENVIO.modo === "direto" && CONFIG_ENVIO.endpoint) {
         fetch(CONFIG_ENVIO.endpoint, {
