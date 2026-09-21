@@ -89,17 +89,69 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ---------- 5. carrossel creators ---------- */
-  const linha = document.getElementById("crew-row");
-  if (linha) {
-    document.querySelectorAll(".crew-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        const item = linha.querySelector(".crew-item");
-        const passo = item ? item.offsetWidth + 24 : 200;
-        linha.scrollBy({ left: Number(btn.dataset.dir) * passo, behavior: reduzMovimento ? "auto" : "smooth" });
-      });
+/* ---------- 5. carrossel creators — infinito ---------- */
+const linha = document.getElementById("crew-row");
+if (linha) {
+  const originais = Array.from(linha.children);
+  const REP_UNIDADE = 3;   // repetições da base por unidade (unidade > janela)
+  const COPIAS_EXTRA = 2;  // unidades extras (B e C) para fechar o loop
+
+  /* unidade = base ×3; clones marcados aria-hidden para não duplicar leitura */
+  const nosUnidade = originais.slice();
+  for (let r = 1; r < REP_UNIDADE; r++) {
+    originais.forEach(function (li) {
+      const c = li.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      nosUnidade.push(c);
     });
   }
+  nosUnidade.slice(originais.length).forEach(function (n) { linha.appendChild(n); });
+  const tamUnidade = nosUnidade.length;
+  for (let k = 0; k < COPIAS_EXTRA; k++) {
+    nosUnidade.forEach(function (li) {
+      const c = li.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      linha.appendChild(c);
+    });
+  }
+
+  /* W = largura de uma unidade; o loop soma/subtrai W sem mudança visual */
+  let W = 0;
+  function medir() {
+    W = linha.children[tamUnidade]
+      ? linha.children[tamUnidade].offsetLeft - linha.children[0].offsetLeft
+      : 0;
+  }
+  function normalizar() {
+    if (!W) return;
+    const s = linha.scrollLeft;
+    if (s >= 2 * W) linha.scrollLeft = s - W;
+    else if (s <= 0) linha.scrollLeft = s + W;
+  }
+  medir();
+  linha.scrollLeft = W;   // começa na cópia do meio: dá para rolar nos dois sentidos
+
+  let tick = false;
+  linha.addEventListener("scroll", function () {
+    if (tick) return;
+    tick = true;
+    requestAnimationFrame(function () { tick = false; normalizar(); });
+  }, { passive: true });
+
+  window.addEventListener("resize", function () {
+    const relativo = W ? (linha.scrollLeft - W) % W : 0;
+    medir();
+    linha.scrollLeft = W + (relativo + W) % W;
+  });
+
+  document.querySelectorAll(".crew-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const item = linha.querySelector(".crew-item");
+      const passo = item ? item.offsetWidth + 24 : 200;
+      linha.scrollBy({ left: Number(btn.dataset.dir) * passo, behavior: reduzMovimento ? "auto" : "smooth" });
+    });
+  });
+}
 
   /* ---------- 6. formulário: validação + estados ----------
      modo "mailto": abre o app de e-mail preenchido (comportamento atual).
