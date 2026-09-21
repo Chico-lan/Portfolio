@@ -216,6 +216,9 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .chip-num{font-family:var(--font-mono);font-size:.75rem;background:var(--preto);color:var(--offwhite);border:1px solid rgba(241,233,220,.35);padding:.15rem .5rem;border-radius:4px}
 .crew-btn{background:none;border:none;color:var(--offwhite);cursor:pointer;padding:.4rem;transition:color .2s}
 .crew-btn:hover{color:var(--mostarda)}
+.crew-btn--esq svg{transform:rotate(90deg)}    /* aponta para a esquerda */
+.crew-btn--dir svg{transform:rotate(-90deg)}   /* aponta para a direita */
+.crew-btn{color:var(--offwhite)}
 
 /* ---------- works teaser (vermelho) ---------- */
 .works-teaser{background:var(--vermelho);color:var(--offwhite);padding:clamp(4rem,9vw,6.5rem) 0}
