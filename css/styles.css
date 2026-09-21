@@ -231,8 +231,6 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .work-card:hover .thumb,.work-card:focus-visible .thumb{transform:translateY(-4px);border-color:var(--mostarda)}
 .work-name{display:block;margin-top:.8rem;font-size:1.15rem;color:var(--offwhite)}
 .works-cta{margin-top:2.4rem;text-align:center}
-.works-seta{display:grid;place-items:center;width:max-content;margin-inline:auto;color:var(--offwhite)}
-.works-seta svg{animation:bob 2.2s ease-in-out infinite}
 .works-teaser .btn-ghost:hover{background:var(--offwhite);color:var(--vermelho)}
 
 /* ---------- serviços (preto) ---------- */
