@@ -145,12 +145,14 @@ if (linha) {
   });
 
   document.querySelectorAll(".crew-btn").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const item = linha.querySelector(".crew-item");
-      const passo = item ? item.offsetWidth + 24 : 200;
-      linha.scrollBy({ left: Number(btn.dataset.dir) * passo, behavior: reduzMovimento ? "auto" : "smooth" });
-    });
-  });
+     btn.addEventListener("click", function () {
+       const item = linha.querySelector(".crew-item");
+       const estilo = getComputedStyle(linha);
+       const gap = parseFloat(estilo.columnGap || estilo.gap) || 0;
+       const passo = item ? item.offsetWidth + gap : 200;   /* 1 item = 1 passo = +1 visível */
+       linha.scrollBy({ left: Number(btn.dataset.dir) * passo, behavior: reduzMovimento ? "auto" : "smooth" });
+     });
+});
 }
 
   /* ---------- 6. formulário: validação + estados ----------
