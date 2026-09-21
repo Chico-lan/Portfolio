@@ -49,6 +49,8 @@
   --header-h:84px;                          /* header um pouco mais alto, como na referência */
   --nav-gap:clamp(1.8rem,4vw,5rem);       /* respiro uniforme entre itens e logo */
   --nav-font:1.05rem;
+  --crew-w:min(96px,24vw);     /* largura fixa de cada item */
+  --crew-gap:min(24px,4vw);    /* gap entre itens */
 }
 }
 
@@ -206,24 +208,32 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .brand-solid{font-family:var(--font-mono);letter-spacing:.12em;text-transform:uppercase;font-size:.95em}
 .nota{font-family:var(--font-mono);font-size:.72rem;color:rgba(241,233,220,.5);text-align:center;margin:1.2rem 0 3.2rem}
 .crew{
-  display:grid;grid-template-columns:auto auto auto;  /* setas coladas na janela */
-  justify-content:center;align-items:center;gap:.9rem;
+  display:grid;grid-template-columns:auto auto auto;
+  justify-content:center;align-items:center;
+  gap:clamp(1.4rem,3.5vw,2.6rem);   /* setas com respiro, não coladas na janela */
 }
 .crew-row{
-  display:flex;gap:1.4rem;overflow-x:auto;
-  max-width:min(720px,80vw);        /* janela centralizada; setas ficam ao lado dela */
-  padding:.5rem .2rem;scrollbar-width:none;
-  /* sem scroll-snap: o "pulo" do loop brigaria com o encaixe */
+  display:flex;gap:var(--crew-gap);
+  width:calc(3 * var(--crew-w) + 2 * var(--crew-gap));  /* janela = 3 itens exatos, sem crop */
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;     /* sempre repousa em item inteiro */
+  padding:.5rem 0;scrollbar-width:none;
 }
 .crew-row::-webkit-scrollbar{display:none}
-.crew-item{display:grid;justify-items:center;gap:.5rem;flex:0 0 auto}
-.crew-row::-webkit-scrollbar{display:none}
-.crew-item{display:grid;justify-items:center;gap:.5rem;scroll-snap-align:center;flex:0 0 auto}
+.crew-item{
+  flex:0 0 auto;width:var(--crew-w);
+  display:grid;justify-items:center;gap:.5rem;
+  scroll-snap-align:start;          /* pontos de parada = início de cada item */
+}
 .avatar{
-  width:76px;height:76px;border-radius:50%;border:1px dashed rgba(241,233,220,.45);
-  background:rgba(241,233,220,.06);color:rgba(241,233,220,.7);
+  width:calc(var(--crew-w) - 20px);
+  height:calc(var(--crew-w) - 20px);
+  border-radius:50%;
+  border:1px dashed rgba(241,233,220,.45);
+  background:rgba(241,233,220,.06);
+  color:rgba(241,233,220,.7);
 }
-.chip-num{font-family:var(--font-mono);font-size:.75rem;background:var(--preto);color:var(--offwhite);border:1px solid rgba(241,233,220,.35);padding:.15rem .5rem;border-radius:4px}
+.chip-num{white-space:nowrap;max-width:100%;font-size:.72rem}
 .crew-btn{background:none;border:none;color:var(--offwhite);cursor:pointer;padding:.4rem;transition:color .2s}
 .crew-btn:hover{color:var(--mostarda)}
 .crew-btn--esq svg{transform:rotate(90deg)}    /* aponta para a esquerda */
@@ -382,6 +392,13 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
   .full{grid-column:auto}
 }
 @media (max-width:640px){ .numeros-lista{grid-template-columns:1fr;gap:1.8rem} }
+
+@media (max-width:600px){
+  .crew{display:flex;flex-wrap:wrap;justify-content:center;row-gap:1.2rem}
+  .crew-row{order:1;margin-inline:auto}
+  .crew-btn--esq{order:2}
+  .crew-btn--dir{order:3;margin-left:2.5rem}
+}
 
 /* ---------- redução de movimento ---------- */
 @media (prefers-reduced-motion:reduce){
