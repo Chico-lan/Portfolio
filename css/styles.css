@@ -263,34 +263,54 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 }
 
 /* ---------- contato (mostarda) ---------- */
-.contato{background:var(--mostarda);color:var(--preto);padding:clamp(4rem,9vw,6.5rem) 0}
-.contato h2{font-size:clamp(2.1rem,5vw,3.1rem)}
-.contato-lead{margin-top:.6rem;max-width:52ch;font-size:1.05rem}
-.canais{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;margin-top:2rem}
-.canais a{
-  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
-  font-weight:600;font-size:.95rem;border-bottom:2px solid rgba(26,21,18,.3);
-  padding-bottom:.2rem;transition:border-color .2s;
+   .contato{background:var(--mostarda);color:var(--preto);padding:clamp(4.5rem,10vw,7.5rem) 0}
+.contato-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
+.contato-eyebrow{font-size:.72rem;letter-spacing:.08em;color:rgba(26,21,18,.75);margin-bottom:1.4rem}
+.contato-titulo{font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:1.05;max-width:12ch}
+.contato-lead{margin-top:1.4rem;font-size:.95rem;line-height:1.65;max-width:36ch;color:rgba(26,21,18,.85)}
+.contato-social{display:flex;gap:1.1rem;margin-top:2.6rem}
+.contato-social a{display:grid;place-items:center;color:var(--preto);transition:transform .2s}
+.contato-social a:hover{transform:translateY(-2px)}
+.contato-social svg{width:22px;height:22px}
+.contato-mail{margin-top:1.4rem;font-size:.75rem}
+
+/* formulário "underline" */
+.form{display:grid;gap:1.7rem}
+.form-campo label{
+  display:block;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;
+  color:rgba(26,21,18,.8);margin-bottom:.55rem;
 }
-.canais a:hover{border-color:var(--preto)}
-.form{margin-top:2.6rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-.full{grid-column:1/-1}
-.form label{display:block;font-weight:600;font-size:.85rem;margin-bottom:.35rem}
-.form input,.form textarea{
-  width:100%;background:var(--offwhite);color:var(--preto);
-  border:1px solid rgba(26,21,18,.4);border-radius:8px;padding:.75rem .9rem;
-  font:400 1rem var(--font-body);transition:border-color .2s,box-shadow .2s;
+.form-campo input,.form-campo textarea{
+  width:100%;background:transparent;border:0;border-radius:0;
+  border-bottom:1px solid rgba(26,21,18,.45);
+  padding:.35rem 0 .6rem;color:var(--preto);
+  font:400 1rem var(--font-body);
+  transition:border-color .2s,box-shadow .2s;
 }
-.form input:focus,.form textarea:focus{outline:none;border-color:var(--preto);box-shadow:0 0 0 3px rgba(26,21,18,.18)}
-.form [aria-invalid="true"]{border-color:var(--vermelho-escuro);box-shadow:0 0 0 3px rgba(94,23,32,.15)}
-.form textarea{min-height:130px;resize:vertical}
-.field-err{display:none;font-weight:600;font-size:.8rem;color:var(--vermelho-escuro);margin-top:.3rem}
+.form-campo input:focus,.form-campo textarea:focus{
+  outline:none;border-bottom-color:var(--preto);box-shadow:0 2px 0 0 var(--preto);
+}
+.form-campo [aria-invalid="true"]{
+  border-bottom-color:var(--vermelho-escuro);box-shadow:0 2px 0 0 var(--vermelho-escuro);
+}
+.form-campo textarea{min-height:110px;resize:vertical}
+.field-err{display:none;font-weight:600;font-size:.78rem;color:var(--vermelho-escuro);margin-top:.4rem}
 .field-err.show{display:block}
-.form-status{grid-column:1/-1;padding:.8rem 1rem;border-radius:8px;font-weight:600;font-size:.9rem}
+.form-status{padding:.8rem 1rem;border-radius:8px;font-weight:600;font-size:.9rem}
 .form-status.ok{background:var(--verde);color:var(--offwhite)}
 .form-status.erro{background:var(--vermelho-escuro);color:var(--offwhite)}
 .form-status.info{background:var(--preto);color:var(--offwhite)}
-.form-nota{grid-column:1/-1;font-family:var(--font-mono);font-size:.72rem;color:rgba(26,21,18,.7)}
+.btn-enviar{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--preto);color:var(--offwhite);
+  border:none;border-radius:6px;padding:.8rem 1.2rem;
+  font-family:var(--font-mono);font-size:.8rem;letter-spacing:.04em;
+  cursor:pointer;transition:transform .2s,background .2s;
+}
+.btn-enviar:hover{transform:translateY(-2px);background:var(--preto-2)}
+.btn-enviar[disabled]{opacity:.6;cursor:progress;transform:none}
+.form-nota{font-size:.68rem;color:rgba(26,21,18,.6);margin-top:.4rem}
+@media (max-width:860px){ .contato-grid{grid-template-columns:1fr} }
 
 /* ---------- rodapé ---------- */
 .rodape{background:var(--preto);color:var(--offwhite);padding:2.2rem 0}
